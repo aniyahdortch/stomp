@@ -84,10 +84,12 @@ func (s *Subscription) Unsubscribe(opts ...func(*frame.Frame) error) error {
 	// We don't want to interfere with `s.C` since we might be "stealing"
 	// MESSAGEs or ERRORs from another goroutine, so use a sync.Cond to
 	// wait for the terminal state transition instead.
-	s.closeMutex.Lock()
+	
+	//Not using Receipt so I don't need to to lock the mutex and wait before closing the channel
+	/*s.closeMutex.Lock()
 	for atomic.LoadInt32(&s.state) != subStateClosed {
 		s.closeCond.Wait()
-	}
+	}*/
 	s.closeMutex.Unlock()
 	return nil
 }
