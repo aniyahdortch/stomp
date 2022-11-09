@@ -1,6 +1,7 @@
 package client
 
 import (
+	"fmt"
 	"container/list"
 )
 
@@ -21,7 +22,8 @@ func NewSubscriptionList() *SubscriptionList {
 // been added to a subscription list.
 func (sl *SubscriptionList) Add(sub *Subscription) {
 	if sub.subList != nil {
-		panic("subscription is already in a subscription list")
+		//panic("subscription is already in a subscription list")
+		fmt.Println("subscription is already in a subscription list")
 	}
 	sl.subs.PushBack(sub)
 	sub.subList = sl
