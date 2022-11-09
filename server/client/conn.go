@@ -662,8 +662,8 @@ func (c *Conn) handleAck(f *frame.Frame) error {
 
 	if ack, ok := f.Header.Contains(frame.Ack); ok {
 		msgId = ack
-	} else if msgId, ok = f.Header.Contains(frame.MessageId); !ok {
-		return missingHeader(frame.MessageId)
+	} else if msgId, ok = f.Header.Contains(frame.Id); !ok {
+		return missingHeader(frame.Id)
 	}
 
 	// expecting message id to be a uint64
