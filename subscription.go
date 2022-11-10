@@ -89,8 +89,8 @@ func (s *Subscription) Unsubscribe(opts ...func(*frame.Frame) error) error {
 	/*s.closeMutex.Lock()
 	for atomic.LoadInt32(&s.state) != subStateClosed {
 		s.closeCond.Wait()
-	}*/
-	s.closeMutex.Unlock()
+	}
+	s.closeMutex.Unlock()*/
 	return nil
 }
 
