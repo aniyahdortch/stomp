@@ -1,0 +1,22 @@
+{
+  "name": "@aniyahdortch/stomp",
+  "version": "1.0.0",
+  "description": "New stomp package to fix ACK in the server side",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aniyahdortch/stomp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aniyahdortch/stomp/issues"
+  },
+  "homepage": "https://github.com/aniyahdortch/stomp#readme"
+}
