@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/aniyahdortch/stomp/issues"
   },
-  "homepage": "https://github.com/aniyahdortch/stomp#readme"
+  "homepage": "https://github.com/aniyahdortch/stomp#readme",
+  "publishConfig": {
+    "@aniyahdortch:registry": "https://npm.pkg.github.com"
+  }
 }
